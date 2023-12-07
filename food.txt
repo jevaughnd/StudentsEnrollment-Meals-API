@@ -1,0 +1,34 @@
+Meat:
+Franks
+Fry Chicken
+Curry Chicken
+Stew Chicken
+-----------------
+
+Starch:
+Rice & Pease
+Yam
+Dumplings
+-----------------
+
+Side:
+Vegetable
+Pasta
+-----------------
+
+Beverage:
+Choclate Tea
+Wata
+Cran Wata
+
+
+
+
+
+
+
+
+
+
+
+

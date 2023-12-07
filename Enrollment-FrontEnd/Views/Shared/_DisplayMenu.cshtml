@@ -1,0 +1,112 @@
+﻿@model IEnumerable<Enrollment_FrontEnd.Models.Menu>
+
+
+
+@{
+	ViewData["Title"] = "_DisplayMenu";
+}
+
+
+
+
+<center><h3>Todays Menu</h3></center>
+
+
+<div class="CardSection">
+
+    <h5 class="meal-title">Break Fast</h5> 
+
+    @foreach (var pic in Model.Where(pic => pic.MealTypeId == 1)) //breakfast
+    {
+
+        <div class="Card-box">
+
+            <center>
+
+                <div class="CardTitle">
+                    <h5>@Html.DisplayFor(modelItem => pic.ItemName)</h5>
+                </div>
+
+            </center>
+
+
+            <!-- image -->
+            <div class="CardImgBox">
+                <img src="@pic.MenuIdImageFilePath" height="150" width="230">
+            </div>
+
+            <h7>
+                @Html.DisplayFor(modelItem => pic.MealType.MealTypeName)
+            </h7>
+
+        </div>
+    }
+</div> <!------------------------------------------------------------------------>
+
+
+
+<div class="CardSection">
+
+    <h5 class="meal-title">Lunch</h5>
+
+    @foreach (var pic in Model.Where(pic => pic.MealTypeId == 2)) //lunch
+    {
+
+            <div class="Card-box">
+
+                <center>
+
+                    <div class="CardTitle">
+                        <h5>@Html.DisplayFor(modelItem => pic.ItemName)</h5>
+                    </div>
+
+                </center>
+
+
+                <!-- image -->
+                <div class="CardImgBox">
+                    <img src="@pic.MenuIdImageFilePath" height="150" width="230">
+                </div>
+
+                <h7>
+                @Html.DisplayFor(modelItem => pic.MealType.MealTypeName)
+                </h7>
+
+            </div>
+    }
+</div> <!------------------------------------------------------------------------>
+
+
+
+
+
+<div class="CardSection">
+
+    <h5 class="meal-title">Dinner</h5>
+
+    @foreach (var pic in Model.Where(pic => pic.MealTypeId == 3)) //dinner
+    {
+
+        <div class="Card-box">
+
+            <center>
+
+                <div class="CardTitle">
+                    <h5>@Html.DisplayFor(modelItem => pic.ItemName)</h5>
+                </div>
+
+            </center>
+
+
+            <!-- image -->
+            <div class="CardImgBox">
+                <img src="@pic.MenuIdImageFilePath" height="150" width="230">
+            </div>
+
+            <h7>
+                @Html.DisplayFor(modelItem => pic.MealType.MealTypeName)
+            </h7>
+
+        </div>
+    }
+</div> <!------------------------------------------------------------------------>

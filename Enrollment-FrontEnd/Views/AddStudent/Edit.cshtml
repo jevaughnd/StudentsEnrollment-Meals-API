@@ -1,0 +1,91 @@
+﻿@model Enrollment_FrontEnd.Models.ViewModel.EnrollVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+
+
+<hr />
+
+<div class="container row-cols-md-3  d-flex justify-content-center align-items-center ">
+    
+    <form asp-action="Edit" class="Razor-Form">
+
+        <center>
+                <h3>Update Student</h3>
+        </center>
+
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input asp-for="Id" hidden />
+
+        @*<div class="form-group">
+        <label asp-for="Id" class="control-label"></label>
+        <input asp-for="Id" class="form-control" />
+        <span asp-validation-for="Id" class="text-danger"></span>
+        </div>*@
+
+        <div class="form-group">
+            <label asp-for="FullName" class="control-label"></label>
+            <input asp-for="FullName" class="form-control" />
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="EmailAddress" class="control-label"></label>
+            <input asp-for="EmailAddress" class="form-control" />
+            <span asp-validation-for="EmailAddress" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="PhoneNumber" class="control-label"></label>
+            <input asp-for="PhoneNumber" class="form-control" />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+
+
+        <!--Lists------------------------------------------------------------------->
+        <div class="form-group">
+            <label asp-for="ParishId" class="control-label"></label>
+            <select asp-for="SelectedParishId" class="form-control" asp-items="@Model.ParishSelectlist">
+                <option disabled selected> -- Select A Parish -- </option>
+            </select>
+            <span asp-validation-for="SelectedParishId" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group">
+            <label asp-for="ProgrammeId" class="control-label"></label>
+            <select asp-for="SelectedProgrammeId" class="form-control" asp-items="@Model.ProgrammeSelectList">
+                <option disabled selected> -- Select A Programme -- </option>
+            </select>
+            <span asp-validation-for="SelectedProgrammeId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ShirtId" class="control-label"></label>
+            <select asp-for="SelectedShirtId" class="form-control" asp-items="@Model.ShirtSelectList">
+                <option disabled selected> -- Select A Shirt Size -- </option>
+            </select>
+            <span asp-validation-for="SelectedShirtId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row-cols-md-1">
+            <input type="submit" value="Update Student" class="btn btn-primary FormBtn" />
+        </div>
+
+
+    </form>
+
+
+</div><!------------->
+
+
+
+<div>
+    <a asp-action="Index" class="btn btn-outline-secondary">Back to List</a>
+</div>
+

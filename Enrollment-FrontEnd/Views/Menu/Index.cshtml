@@ -1,0 +1,127 @@
+﻿@model IEnumerable<Enrollment_FrontEnd.Models.Menu>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<partial name="_KitchenStaff_Dashboard" />
+<center>
+    <h3>Menu Items</h3>
+</center>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MealType.MealTypeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemCategory.CategoryName)
+            </th>
+
+            <th>
+                Image
+            </th>
+
+            @*<th>
+                Img Link
+            </th>*@
+            <th>
+                <p>
+                    <a asp-action="Create" class="btn btn-sm btn-success">Create New
+                        <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+                    </a>
+                </p>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.MealType.MealTypeName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemCategory.CategoryName)
+            </td>
+
+            <td>
+                <div class="img-In-Table">
+                    <a href="@item.MenuIdImageFilePath" target="_blank">
+                        <div class="img-In-Table">
+                            <img src="@item.MenuIdImageFilePath" />
+                        </div>
+                    </a>
+                </div>
+            </td>
+
+            
+            @*<td width="10%">
+                <a href="@item.MenuIdImageFilePath" target="_blank">View</a>
+            </td>*@
+      
+
+
+            <td>
+                <div class=" btn-group w-75">
+                    <!--Align buttons-->
+
+                    <a asp-action="EditMenu" asp-route-id="@item.Id" class="btn btn-sm btn-success">
+                        <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+                    </a>
+
+                    <a asp-action="Detail" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </a>
+
+
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">
+                        <i class="far fa-trash-alt"></i>
+                    </a>
+                </div>
+
+
+            </td>
+
+        </tr>
+}
+    </tbody>
+</table>
+
+<partial name="_DisplayMenu" />
+
+@*<h5>Images</h5>
+<!--How To display Image-->
+<!-- Content Grid -->
+<div class="grid-content_row">
+
+    @foreach (var pic in Model)
+    {
+        <div class="grid-content_colum">
+            <!-- image -->
+            <div class="ID-img-container">
+                <img src="@pic.MenuIdImageFilePath" />
+            </div>
+
+        </div>
+    }
+</div>*@

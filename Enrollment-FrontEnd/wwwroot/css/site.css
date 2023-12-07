@@ -1,0 +1,264 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+/*--------- Header -----*/
+
+.style-header{
+    background-color:orangered;
+
+   height:70px;
+
+}
+
+
+
+
+
+
+/*nav links*/
+.nav-head-link {
+    background-color:white;
+    color: orangered;
+    text-decoration: none;
+    border-radius: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-left: 20px;
+    padding: 1px 12px 1px 12px;
+    border: solid lightgrey 1px;
+}
+
+    .nav-head-link:hover {
+        color: white;
+        background-color: blue;
+        box-shadow: 1px 1px 2px darkred;
+        border: none;
+    }
+
+.loginLink {
+    position: absolute;
+    margin-left: 300px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 2px darkred;
+    /padding: 1px 12px 1px 12px;
+}
+
+
+
+
+/*------------------Home Page -------------------- */
+
+.Home-Big-Img{
+     margin-left:-94px;
+
+}
+
+
+.home-big-text{
+    position:absolute;
+    color:orangered;
+    background-color:white;
+    margin-top:100px;
+    margin-left:50px;
+    padding: 15px;
+    border-radius:6px;
+}
+
+
+
+
+
+
+.HomeNavBtns {
+    display: flex;
+    position: absolute;
+    margin-left: 275px;
+    margin-top: 400px;
+    width: 600px;
+    height: 80px;
+    height: 40px;
+    justify-content: space-evenly;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px 0 rgb(0, 0, 0);
+}
+
+
+/*-----------------Menu Page Styling ----------------------*/
+
+
+.meal-title{
+    position:absolute;
+    color:white;
+    margin-left:380px;
+    font-size:30px;
+
+}
+
+.CardSection {
+    display: flex;
+    justify-content: space-between;
+    background-color: orangered;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: 115px;
+    /border: solid red 1px;
+    width: 900px;
+    height: 300px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.15);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+}
+
+
+.Card-box {
+    margin-top: 45px;
+    /border:solid red 2px;
+    height: 215px;
+    width: 230px;
+    background-color: white;
+    border-radius:4px;
+ 
+}
+
+.CardImgBox {
+    /border: solid black 1px;
+    height: 150px;
+    width: 230px;
+    border-radius: 5px;
+    /margin-top: 2px;
+    background-color: lightgray;
+}
+
+.CardTitle {
+    margin-top: 6px;
+    /border:solid black 1px;
+    height: 30px;
+    width: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    //margin-bottom: 60px;
+    background-color:white;
+    color: darkblue;
+}
+
+
+
+
+
+.ID-img-container{
+    display:flex;
+    border:solid black 2px;
+    height:100px;
+    width:150px;
+}
+
+
+.img-In-Table {
+    display: flex;
+    /border: solid black 1px;
+    height: 50px;
+    width: 50px;
+}
+
+
+/*Razor Pages Styling*/
+.Razor-Form {
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px 1px rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.FormBtn {
+    margin-top: 20px;
+}
+
+
+
+/*--------------------- Login Page---------------------*/
+
+.LoginForm {
+    position: absolute;
+    border: solid white 2px;
+    box-shadow: 3px 4px 30px 0 rgb(0, 0, 0);
+    padding: 10px 30px 20px 30px;
+    width: 550px;
+    border-radius: 12px;
+    background-color: darkblue;
+    color: white;
+    font-size: 30px;
+    /align-content: space-evenly;
+    margin-top: 525px;
+    /margin-bottom:150px;
+    margin-left: 80px;
+    text-shadow: 3px 1px 2px black; /* Dark border effect */
+}
+
+.loginBtn {
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------order-form -----------*/
+
+.order-form {
+    background-color: orangered;
+    color: white;
+    border-radius: 6px;
+   
+    box-shadow: 1px 2px 8px 0px rgb(0, 0, 0);
+}

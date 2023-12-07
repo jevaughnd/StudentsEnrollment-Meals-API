@@ -1,0 +1,66 @@
+﻿@model Enrollment_FrontEnd.Models.ViewModel.MenuVM
+
+@{
+    ViewData["Title"] = "EditMenu";
+}
+
+<center> <h3>Update Menu Item</h3> </center>
+
+<hr />
+<div class="container row-cols-md-3  d-flex justify-content-center align-items-center ">
+
+    <form method="Post" enctype="multipart/form-data" asp-action="EditMenu" class="Razor-Form">
+
+
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        @*<div class="form-group">
+        <label asp-for="Id" class="control-label"></label>
+        <input asp-for="Id" class="form-control" />
+        <span asp-validation-for="Id" class="text-danger"></span>
+        </div>*@
+
+
+        <div class="form-group">
+            <label asp-for="MealTypeId" class="control-label"></label>
+            <select asp-for="SelectedMealTypeId" class="form-control" asp-items="@Model.MealTypeList">
+                <option disabled selected> -- Select A Meal Type -- </option>
+            </select>
+            <span asp-validation-for="SelectedMealTypeId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ItemName" class="control-label"></label>
+            <input asp-for="ItemName" class="form-control" />
+            <span asp-validation-for="ItemName" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group">
+            <label asp-for="ItemCategoryId" class="control-label"></label>
+            <select asp-for="SelectedItemCatId" class="form-control" asp-items="@Model.ItemCatList">
+                <option disabled selected> -- Select A Category -- </option>
+            </select>
+            <span asp-validation-for="SelectedItemCatId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="MenuIdImageFile">Item Image:</label>
+            <input type="file" name="MenuIdImageFile" id="MenuIdImageFile" class="form-control">
+        </div>
+
+
+
+        <div class="form-group row-cols-md-1">
+            <input type="submit" value="Update Menu" class="btn btn-primary FormBtn" />
+        </div>
+    </form>
+
+
+</div> <!---------->
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

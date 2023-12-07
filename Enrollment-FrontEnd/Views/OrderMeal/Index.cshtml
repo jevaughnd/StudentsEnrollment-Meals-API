@@ -1,0 +1,108 @@
+﻿@model IEnumerable<AmberEnrollmentAPI.Models.MealOrder>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<partial name="_KitchenStaff_Dashboard" />
+
+
+
+
+
+<center>
+    <h3>Meal Orders</h3>
+</center>
+
+
+
+<table class="table table-hover"> 
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProgrammeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MealTypeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MeatOptionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StarchOptionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SideOptionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BeverageOptionId)
+            </th>
+            <th>
+                <p>
+                    <a asp-action="Create" class="btn btn-sm btn-success">Create New
+                        <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+                    </a>
+                </p>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Student.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Programme.ProgrammeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MealType.MealTypeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MeatOption.MeatName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StarchOption.StarchName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SideOption.SideName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BeverageOption.BeverageName)
+            </td>
+
+                <td>
+                    <div class=" btn-group w-75">
+                        <!--Align buttons-->
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-success">
+                            <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+                        </a>
+
+                        <a asp-action="Detail" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </a>
+
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">
+                            <i class="far fa-trash-alt"></i>
+                        </a>
+                    </div>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

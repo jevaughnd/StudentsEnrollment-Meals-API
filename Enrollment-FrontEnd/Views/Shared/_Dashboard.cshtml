@@ -1,0 +1,82 @@
+﻿
+
+@{
+	ViewData["Title"] = "_Dashboard";
+}
+
+<nav class="dashboard close">
+	<!--------------->
+
+
+
+	<header>
+		<center>
+			<h4>Enrollment Staff</h4>
+		</center>
+		<i class=' bx bx-chevron-left toggle'></i>
+	</header>
+
+
+	<div class="menu-bar">
+
+		<div class="menu">
+
+			<ul class="menu-links">
+				<!--ul-->
+
+				<li class="">
+					<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">
+						<i class="bx bx-home-alt icon"></i>
+						<span class="text nav-text"> Home </span>
+					</a>
+				</li>
+
+				<li class="">
+					<a class="nav-link" asp-area="" asp-controller="AddStudent" asp-action="Index">
+						@*<i class="bx bx-user-circle icon"></i>*@
+						<i class="fa-solid fa-user-plus icon"></i>
+						<span class="text nav-text"> Students </span>
+					</a>
+				</li>
+
+			
+			
+
+
+
+				<li class=""> <!--Next-->
+					<a class="nav-link" asp-area="" asp-controller="Menu" asp-action="Index">
+						
+						<i class="fa-solid fa-arrow-right icon"></i>
+						<span class="text nav-text">Kitchen</span>
+					</a>
+				</li>
+
+
+				<li class="">
+					<a class="nav-link" asp-area="" asp-controller="" asp-action="">
+						<i class="bx bx-log-out icon"></i>
+						<span class="text nav-text"> Log Out </span>
+					</a>
+				</li>
+
+
+
+
+
+
+			</ul><!--ul-->
+		</div>
+	</div>
+
+
+	<center><h6 class="dash-footer">School Enrollment</h6></center>
+	<hr />
+	<hr />
+	<hr />
+
+
+</nav> <!----------------------------->
+
+
+<script src="~/js/site.js"></script> <!--toggle function-->
